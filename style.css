@@ -327,8 +327,6 @@
 
         /* Hero Banner */
         .hero-banner {
-            background: url('https://placehold.co/1920x800/f0a0a0/333?text=Corredores+con+perros') no-repeat center center/cover;
-            /* Usamos vh pero restamos la altura del header fijo */
             height: calc(80vh - var(--header-height));
             min-height: 500px;
             display: flex;
@@ -368,6 +366,14 @@
             font-size: 1.5rem;
             margin-bottom: 2.5rem;
             color: #f0f0f0;
+        }
+
+        @media (max-width: 425px) { 
+          .hero-banner {
+                 background-image: url('assets/Imagery/hero-huellitas-mobile.jpg') !important;
+                 background-size: cover;
+                 background-position: center;
+             }
         }
 
         /* Información de la Carrera */
@@ -516,10 +522,11 @@
             min-width: 300px;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
         }
 
         .kit-images img {
-            max-width: 100%;
+            max-width: 60%;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
