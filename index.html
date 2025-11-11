@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,49 +9,108 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
     <header class="main-header">
         <div class="container">
-            <div class="logo">Dog Run</div>
-            <nav class="main-nav">
+
+            <!-- 1. Logo -->
+            <a href="#hero" class="logo">
+                <!-- Usamos un placeholder ya que no tengo 'Huellitas_logo.png' -->
+                <img src="assets/Logo/Huellitas_logo.png" alt="Huellitas_logo.png" style="height: 50px;">
+            </a>
+
+            <!-- 2. Navegación (Contenedor del Cajón) -->
+            <nav class="main-nav" id="main-nav">
                 <ul>
                     <li><a href="#hero">Inicio</a></li>
-                    <li><a href="#info">Información</a></li>
-                    <li><a href="#packages">Paquetes</a></li>
+                    <li><a href="#info">Acerca de Huellitas</a></li>
+                    <li><a href="#kit">Kit de Corredor</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
+                <!-- 3. Botón (Se mueve aquí para estar dentro del cajón en móvil) -->
+                <a href="#kit" class="btn btn-primary btn-header-cta">¡Inscríbete Ya!</a>
             </nav>
+
+            <!-- 4. Botón Hamburguesa (Oculto en desktop) -->
+            <button class="hamburger-button" id="hamburger-button" aria-label="Abrir menú" aria-expanded="false">
+                <!-- Icono de Hamburguesa (líneas) -->
+                <svg class="icon-hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <!-- Icono de Cerrar (X) -->
+                <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
         </div>
     </header>
 
     <section id="hero" class="hero-banner">
         <div class="hero-content">
-            <h1>¡Corre con tu Mejor Amigo! 🐶 Dog Run [Nombre del Evento]</h1>
-            <p>La carrera más divertida donde tú y tu peludo hacen equipo. [Fecha] - [Ciudad]</p>
+            <h1>¡Corre con tu Mejor Amigo! 🐶</h1>
+            <p>La carrera virtual más divertida donde tú y tu peludo hacen equipo.</p>
             <a href="#packages" class="btn btn-primary">¡Inscríbete Ahora! 🏃</a>
         </div>
     </section>
 
+    <!-- Información de la Carrera -->
     <section id="info" class="section-info">
         <div class="container">
-            <h2>Acerca de la Carrera: El Gran Día</h2>
-            <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <div class="info-grid">
-                <div class="info-item">
-                    <h3><i class="fas fa-route"></i> Distancia(s)</h3>
-                    <p>3K y 5K</p>
+            <h2>Acerca de Huellitas: El Gran Día</h2>
+
+            <!-- 3 Columnas de Texto Descriptivo -->
+            <div class="about-columns">
+                <div class="about-col">
+                    <h3>Corre a tu ritmo, corre con tu peludo</h3>
+                    <p>¿Te encanta correr acompañado de tu perrito? ¿O prefieres hacerlo en solitario disfrutando de tu
+                        ruta favorita? ¡Huellitas Run es para ti!</p>
+                    <p>Esta carrera virtual está pensada para dueños de perros y amantes del running, donde tú decides
+                        cuándo, dónde y con quién correr.</p>
                 </div>
-                <div class="info-item">
-                    <h3><i class="fas fa-map-marker-alt"></i> Lugar de Salida</h3>
-                    <p>Parque Metropolitano</p>
+                <div class="about-col">
+                    <h3>Corre desde cualquier rincón</h3>
+                    <p>¡Huellitas Run es 100% virtual! Participa desde cualquier parte y comparte tu experiencia con la
+                        comunidad perruna.</p>
+                    <p>Elige tu ruta, tu horario y disfruta cada paso junto a tu fiel compañero. Comparte tu experiencia
+                        en redes sociales con el hashtag #HuellitasRun y etiquétanos.</p>
+                    <p>Queremos ver cómo entrenas, cómo corres con tu lomito y cómo celebran juntos la meta. ¡Tu
+                        historia puede aparecer en nuestras redes oficiales!</p>
                 </div>
-                <div class="info-item">
-                    <h3><i class="fas fa-clock"></i> Hora</h3>
-                    <p>8:00 AM</p>
+                <div class="about-col">
+                    <h3>¿No tienes perrito? ¡También puedes participar!</h3>
+                    <p>Aunque Huellitas Run celebra la conexión entre humanos y perros, todos son bienvenidos. Puedes
+                        correr solo, con amigos o en familia, y ser parte de una experiencia que promueve el amor por
+                        los animales, el deporte y el bienestar.</p>
                 </div>
             </div>
-            <a href="#" class="btn btn-secondary">Ver Ruta y Reglamento</a>
+
+            <!-- Grid de Tarjetas Informativas -->
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3><i class="fas fa-route"></i> Distancia</h3>
+                    <p>5K</p>
+                </div>
+                <div class="info-item">
+                    <h3><i class="fas fa-globe-americas"></i> Modalidad</h3>
+                    <p>Virtual</p>
+                </div>
+                <div class="info-item">
+                    <h3><i class="fas fa-box-open"></i> Entrega de Paquetes</h3>
+                    <p>La entrega de paquetes está por definirse, pero no te preocupes: te mantendremos informado a
+                        través de nuestras redes sociales y correo electrónico.</p>
+                </div>
+            </div>
+            <!-- Botón actualizado -->
+            <a href="#packages" class="btn btn-primary">¡Inscríbete ahora! 🐾</a>
         </div>
     </section>
 
@@ -62,11 +122,31 @@
 
     <section id="kit" class="section-kit">
         <div class="container">
-            <h2>Tu Kit de Corredor: ¡Recuerdos Inolvidables!</h2>
+            <h2>El Kit Huellitas Run: <br>
+                Corre con estilo, presume el lazo que los une</h2>
             <div class="kit-content">
                 <div class="kit-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Descubre la calidad de nuestra playera técnica diseñada para la comodidad, y colecciona la medalla exclusiva que celebrará tu esfuerzo y el de tu compañero.</p>
-                    <p><strong>¡Medalla especial para tu perro también!</strong></p>
+                    <p>Más que una playera y una medalla, el <strong>Kit Huellitas Run</strong> es un símbolo de
+                        conexión, alegría y amor
+                        por tu mejor amigo.
+                        Diseñado para celebrar la energía y la lealtad de nuestros compañeros de cuatro patas, este kit
+                        representa la esencia de quienes corremos con el corazón (y con huellitas a nuestro lado).</p>
+
+                    <p>Nuestra <strong>playera oficial</strong> está inspirada en la vitalidad y
+                        diversión del mundo canino. Su diseño moderno con detalles que evocan movimiento, energía y
+                        amistad te acompañará en cada paso.</p>
+
+                    <p>La<strong> medalla Huellitas Run</strong> es el reflejo de tu esfuerzo compartido. Con un diseño
+                        único, lleno de
+                        color y detalles que representan la unión entre corredor y peludo, es el recordatorio perfecto
+                        de que cada kilómetro cuenta, y que cada meta se disfruta mejor juntos.</p>
+
+                    <p><strong>Cada elemento del kit</strong> está pensado para que lleves contigo el espíritu de la
+                        comunidad
+                        Huellitas Run: corredores, soñadores y amantes de los perros.</p>
+
+                    <p><strong>Corre, comparte y celebra </strong> esta experiencia virtual donde cada paso deja una
+                        huella.</p>
                 </div>
                 <div class="kit-images">
                     <img src="https://via.placeholder.com/400x300?text=Playera" alt="Playera de la carrera">
@@ -76,82 +156,197 @@
         </div>
     </section>
 
+    <section class="art-banner">
+        <div class="container">
+            <h3>¡Un día de diversión para toda la familia y las patitas!</h3>
+        </div>
+    </section>
+
     <section id="packages" class="section-packages">
         <div class="container">
             <h2>Elige Tu Aventura: Paquetes de Inscripción</h2>
             <div class="packages-grid">
-                <div class="package-card">
-                    <h3>Paquete Pata Junior</h3>
-                    <p class="price">\$250 MXN</p>
-                    <ul>
-                        <li>Playera Técnica</li>
-                        <li>Número de Corredor</li>
-                        <li>Medalla Humana</li>
-                        <li><i class="fas fa-times-circle"></i> Medalla Perruna</li>
-                    </ul>
-                    <a href="#" class="btn btn-package">Seleccionar</a>
-                </div>
-                <div class="package-card featured">
-                    <h3>Paquete Perruno VIP</h3>
-                    <p class="price">\$450 MXN</p>
-                    <ul>
-                        <li>Playera Técnica</li>
-                        <li>Número de Corredor</li>
-                        <li>Medalla Humana</li>
-                        <li><i class="fas fa-check-circle"></i> Medalla Perruna</li>
-                        <li><i class="fas fa-bone"></i> Paquete de Snacks Pet-Friendly</li>
-                        <li><i class="fas fa-camera"></i> Foto Oficial del Evento</li>
-                    </ul>
-                    <a href="#" class="btn btn-package btn-featured">¡El Más Popular!</a>
-                </div>
-                <div class="package-card">
-                    <h3>Paquete Manada Completa</h3>
-                    <p class="price">\$700 MXN</p>
-                    <ul>
-                        <li>Playera Técnica (2)</li>
-                        <li>Número de Corredor</li>
-                        <li>Medalla Humana</li>
-                        <li><i class="fas fa-check-circle"></i> Medalla Perruna</li>
-                        <li><i class="fas fa-bone"></i> Paquete de Snacks Pet-Friendly</li>
-                        <li><i class="fas fa-camera"></i> Foto Oficial del Evento</li>
-                        <li><i class="fas fa-couch"></i> Acceso a Zona de Relax Post-Carrera</li>
-                    </ul>
-                    <a href="#" class="btn btn-package">Seleccionar</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="contact" class="section-contact">
-        <div class="container">
-            <h2>¿Tienes Preguntas? ¡Estamos Aquí para Ayudarte!</h2>
-            <div class="contact-content">
-                <form class="contact-form">
-                    <input type="text" placeholder="Nombre Completo" required>
-                    <input type="email" placeholder="Correo Electrónico" required>
-                    <textarea placeholder="Tu Mensaje" rows="5"></textarea>
-                    <button type="submit" class="btn btn-primary">Enviar Consulta</button>
-                </form>
-                <div class="contact-info">
-                    <h3>Información de Contacto</h3>
-                    <p><i class="fas fa-envelope"></i> Email: contacto@dogrun.com</p>
-                    <p><i class="fas fa-phone"></i> Teléfono: +52 123 456 7890</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle Ficticia #123, Ciudad, País</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                <div class="package-card" data-package-id="medal-runner">
+                    <h3>Kit Medal Runner</h3>
+                    <div class="kit-image-placeholder">
+                        <img src="https://via.placeholder.com/300x200?text=Kit+Medalla"
+                            alt="Imagen del Kit Medal Runner">
+                    </div>
+                    <p class="price">$250 MXN</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Tote-bag</li>
+                        <li><i class="fas fa-check-circle"></i> Medalla</li>
+                        <li><i class="fas fa-check-circle"></i> Número de Corredor</li>
+                    </ul>
+                    <select class="kit-select" data-requires-sizes="false">
+                        <option value="">Selecciona una opción...</option>
+                        <option value="buy-pickup-1">Comprar y recoger kit</option>
+                        <option value="buy-ship-1">Comprar + envío</option>
+                    </select>
+                </div>
+
+                <div class="package-card featured" data-package-id="pet-runner">
+                    <h3>Kit Pet Runner</h3>
+                    <div class="kit-image-placeholder">
+                        <img src="https://via.placeholder.com/300x200?text=Kit+VIP" alt="Imagen del Kit Pet Runner">
+                    </div>
+                    <p class="price">$700 MXN</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Tote-bag</li>
+                        <li><i class="fas fa-check-circle"></i> Dog-bag</li>
+                        <li><i class="fas fa-check-circle"></i> Número de competidor</li>
+                        <li><i class="fas fa-check-circle"></i> Playera</li>
+                        <li><i class="fas fa-check-circle"></i> Bandana</li>
+                        <li><i class="fas fa-check-circle"></i> Medalla Dueño+Perro</li>
+                    </ul>
+                    <select class="kit-select" data-requires-sizes="true">
+                        <option value="">Selecciona una opción...</option>
+                        <option value="buy-pickup-2">Comprar y recoger kit</option>
+                        <option value="buy-ship-2">Comprar + envío</option>
+                    </select>
+                    <div class="size-options-container" style="display:none;">
+                        <h4>Selecciona tu talla de playera:</h4>
+                        <div class="size-options">
+                            <div class="size-column">
+                                <h5>Hombres</h5>
+                                <button class="btn btn-size" data-size="H-CH">Talla Ch</button>
+                                <button class="btn btn-size" data-size="H-M">Talla M</button>
+                                <button class="btn btn-size" data-size="H-G">Talla G</button>
+                                <button class="btn btn-size" data-size="H-XG">Talla XG</button>
+                            </div>
+                            <div class="size-column">
+                                <h5>Mujeres</h5>
+                                <button class="btn btn-size" data-size="M-XCH">Talla xCh</button>
+                                <button class="btn btn-size" data-size="M-CH">Talla Ch</button>
+                                <button class="btn btn-size" data-size="M-M">Talla M</button>
+                                <button class="btn btn-size" data-size="M-G">Talla G</button>
+                                <button class="btn btn-size" data-size="M-XG">Talla XG</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="package-card" data-package-id="runner">
+                    <h3>Kit Runner</h3>
+                    <div class="kit-image-placeholder">
+                        <img src="https://via.placeholder.com/300x200?text=Kit+Runner" alt="Imagen del Kit Runner">
+                    </div>
+                    <p class="price">$450 MXN</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Tote-bag</li>
+                        <li><i class="fas fa-check-circle"></i> Número de Corredor</li>
+                        <li><i class="fas fa-check-circle"></i> Playera</li>
+                        <li><i class="fas fa-check-circle"></i> Medalla</li>
+                    </ul>
+                    <select class="kit-select" data-requires-sizes="true">
+                        <option value="">Selecciona una opción...</option>
+                        <option value="buy-pickup-3">Comprar y recoger kit</option>
+                        <option value="buy-ship-3">Comprar + envío</option>
+                    </select>
+                    <div class="size-options-container" style="display:none;">
+                        <h4>Selecciona tu talla de playera:</h4>
+                        <div class="size-options">
+                            <div class="size-column">
+                                <h5>Hombres</h5>
+                                <button class="btn btn-size" data-size="H-CH">Talla Ch</button>
+                                <button class="btn btn-size" data-size="H-M">Talla M</button>
+                                <button class="btn btn-size" data-size="H-G">Talla G</button>
+                                <button class="btn btn-size" data-size="H-XG">Talla XG</button>
+                            </div>
+                            <div class="size-column">
+                                <h5>Mujeres</h5>
+                                <button class="btn btn-size" data-size="M-XCH">Talla xCh</button>
+                                <button class="btn btn-size" data-size="M-CH">Talla Ch</button>
+                                <button class="btn btn-size" data-size="M-M">Talla M</button>
+                                <button class="btn btn-size" data-size="M-G">Talla G</button>
+                                <button class="btn btn-size" data-size="M-XG">Talla XG</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="main-footer-black">
         <div class="container">
-            <p>&copy; 2023 Dog Run [Nombre del Evento]. Todos los derechos reservados.</p>
+            <div class="footer-grid">
+
+                <div class="footer-col footer-branding">
+                    <div class="footer-brand">
+                        <a href="#hero" class="logo">
+                            <div class="imago">
+                                <img src="assets/Logo/triangulo_logo.svg" alt="Huellitas Logo"
+                                    style="height: 50px;">
+                            </div>
+                            <div>
+                                <p class="triangulo">Triángulo Producciones</p>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="branding-description">Creamos experiencias atléticas únicas y memorables. Vamos más allá
+                        de las típicas carreras de circuito cerrado, ofreciendo eventos virtuales que te dan la libertad
+                        de correr a tu ritmo, en tu propia ruta y en el momento que tú elijas.</p>
+                    <p class="mission-statement">Nuestra misión es motivar a la gente a mantenerse activa y conectada,
+                        tanto individualmente como en comunidad. Creemos que cada carrera es una oportunidad para
+                        alcanzar una meta personal, divertirse con amigos o familia, y formar parte de una comunidad de
+                        corredores que comparte la misma pasión.</p>
+                    <div class="social-links-footer">
+                        <a href="https://www.instagram.com/trianguloproduccionesmx" target="_blank"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/176qJ8orVE/" target="_blank" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@trianguloproducciones" target="_blank" aria-label="TikTok"><i
+                                class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Nosotros</h4>
+                    <ul>
+                        <li><a href="https://trianguloproducciones.com.mx/">Inicio</a></li>
+                        <li><a href="#">Acerca de Nosotros</a></li>
+                        <li><a href="https://trianguloproducciones.com.mx/pages/contact">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Eventos Anteriores</h4>
+                    <ul>
+                        <li><a href="https://trianguloproducciones.com.mx/pages/recuerdame" target="_blank">Recuérdame
+                                Run</a></li>
+                        <li><a href="#">Día del Padre</a></li>
+                        <li><a href="#">Carrera Mexicana</a></li>
+                        <li><a href="#">Recuérdame</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="https://trianguloproducciones.com.mx/pages/contact">Contacto</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">Organiza tu carrera</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Políticas de Envío</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Triángulo Producciones. Todos los derechos reservados.</p>
+                <p class="designer-text">Sitio diseñado por <a href="https://alternatifdbd.wixsite.com/alternatifdsign"
+                        target="_blank">Alternatif D-sign</a></p>
+                <p class="terms-link"><a href="#">Términos y políticas</a></p>
+            </div>
         </div>
     </footer>
 
+    <script src="script.js" defer></script>
 </body>
+
 </html>

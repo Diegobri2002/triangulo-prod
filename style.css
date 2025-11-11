@@ -1,605 +1,1016 @@
-/* Variables CSS */
-:root {
-    --primary-color: #FF6B6B; /* Rojo vibrante para CTA */
-    --secondary-color: #4ECDC4; /* Turquesa para elementos secundarios */
-    --dark-color: #333;
-    --light-color: #f4f4f4;
-    --text-color: #555;
-    --heading-color: #333;
-    --accent-color: #FFE66D; /* Amarillo para detalles o destacados */
-    --bg-light-grey: #f9f9f9;
-}
-
-/* Reset Básico y Tipografía */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Nunito', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: #fff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-h1, h2, h3 {
-    color: var(--heading-color);
-    margin-bottom: 1rem;
-    font-weight: 800;
-}
-
-h1 { font-size: 3.5rem; }
-h2 { font-size: 2.5rem; text-align: center; margin-bottom: 2rem;}
-h3 { font-size: 1.8rem; }
-
-p {
-    margin-bottom: 1rem;
-}
-
-a {
-    text-decoration: none;
-    color: var(--primary-color);
-}
-
-ul {
-    list-style: none;
-}
-
-/* Botones */
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-weight: 700;
-    transition: all 0.3s ease;
-    text-align: center;
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: #fff;
-    font-size: 1.1rem;
-    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
-}
-
-.btn-primary:hover {
-    background-color: #FF4F4F;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.5);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
-    margin-top: 1rem;
-}
-
-.btn-secondary:hover {
-    background-color: var(--secondary-color);
-    color: #fff;
-}
-
-/* Header / Navegación */
-.main-header {
-    background-color: #fff;
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.main-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--primary-color);
-}
-
-.main-nav ul {
-    display: flex;
-}
-
-.main-nav ul li {
-    margin-left: 30px;
-}
-
-.main-nav ul li a {
-    color: var(--dark-color);
-    font-weight: 700;
-    transition: color 0.3s ease;
-}
-
-.main-nav ul li a:hover {
-    color: var(--primary-color);
-}
-
-/* Secciones generales */
-section {
-    padding: 80px 0;
-    overflow: hidden; /* Para contener floats si se usan */
-}
-
-/* Hero Banner */
-.hero-banner {
-    background: url('https://via.placeholder.com/1920x800?text=Corredores+con+perros') no-repeat center center/cover;
-    height: 90vh; /* Altura de la vista */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    position: relative;
-}
-
-.hero-banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Overlay oscuro */
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    padding: 20px;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-    color: #fff;
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 2.5rem;
-    color: #f0f0f0;
-}
-
-/* Información de la Carrera */
-.section-info {
-    background-color: var(--bg-light-grey);
-    text-align: center;
-}
-
-.section-info .description {
-    max-width: 800px;
-    margin: 0 auto 3rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-bottom: 3rem;
-}
-
-.info-item {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.info-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-}
-
-.info-item i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.info-item h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Banner de División con Arte */
-.art-banner {
-    background: url('https://via.placeholder.com/1920x300?text=Arte+de+la+Carrera') no-repeat center center/cover;
-    min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
-    position: relative;
-}
-
-.art-banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* Overlay */
-}
-
-.art-banner h3 {
-    position: relative;
-    z-index: 1;
-    font-size: 2.5rem;
-    color: #fff;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
-/* Playera y Medalla */
-.section-kit {
-    background-color: #fff;
-    text-align: center;
-}
-
-.kit-content {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 3rem;
-}
-
-.kit-text {
-    flex: 1;
-    min-width: 300px; /* Ancho mínimo para el texto */
-    text-align: left;
-    max-width: 600px;
-}
-
-.kit-text p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-}
-
-.kit-images {
-    flex: 1;
-    display: flex;
-    gap: 20px;
-    min-width: 300px; /* Ancho mínimo para las imágenes */
-    justify-content: center;
-    align-items: center;
-}
-
-.kit-images img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.kit-images img:hover {
-    transform: scale(1.03);
-}
-
-/* Paquetes */
-.section-packages {
-    background-color: var(--bg-light-grey);
-    padding-bottom: 80px;
-}
-
-.packages-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 3rem;
-}
-
-.package-card {
-    background: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.package-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-}
-
-.package-card.featured {
-    border: 3px solid var(--accent-color);
-    box-shadow: 0 8px 25px rgba(255, 230, 109, 0.6);
-}
-
-.package-card h3 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.package-card .price {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--dark-color);
-    margin-bottom: 1.5rem;
-}
-
-.package-card ul {
-    margin-bottom: 2rem;
-    flex-grow: 1; /* Permite que la lista crezca y empuje el botón hacia abajo */
-}
-
-.package-card ul li {
-    font-size: 1.1rem;
-    padding: 8px 0;
-    color: var(--text-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.package-card ul li i {
-    margin-right: 10px;
-    color: var(--secondary-color);
-}
-
-.package-card ul li .fa-times-circle {
-    color: #CCC; /* Gris para características no incluidas */
-}
-
-.btn-package {
-    background-color: var(--secondary-color);
-    color: #fff;
-    font-size: 1.1rem;
-    display: block; /* Ocupa todo el ancho disponible */
-    width: 100%;
-}
-
-.btn-package:hover {
-    background-color: #3BBFBA;
-}
-
-.btn-package.btn-featured {
-    background-color: var(--primary-color);
-    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
-}
-
-.btn-package.btn-featured:hover {
-    background-color: #FF4F4F;
-}
-
-/* Contactos */
-.section-contact {
-    background-color: #fff;
-}
-
-.section-contact h2 {
-    margin-bottom: 3rem;
-}
-
-.contact-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
-}
-
-.contact-form {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: 'Nunito', sans-serif;
-    transition: border-color 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
-}
-
-.contact-form .btn-primary {
-    align-self: flex-start; /* Alinea el botón a la izquierda */
-    margin-top: 10px;
-}
-
-.contact-info {
-    flex: 1;
-    min-width: 280px;
-    max-width: 400px;
-    background-color: var(--bg-light-grey);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.contact-info h3 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    text-align: left; /* Aseguramos que el h3 interno no se centre */
-}
-
-.contact-info p {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.contact-info p i {
-    margin-right: 15px;
-    color: var(--secondary-color);
-    font-size: 1.3rem;
-}
-
-.social-links {
-    margin-top: 2rem;
-    display: flex;
-    gap: 20px;
-}
-
-.social-links a {
-    color: var(--dark-color);
-    font-size: 2rem;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--primary-color);
-}
-
-/* Footer */
-footer {
-    background-color: var(--dark-color);
-    color: #fff;
-    text-align: center;
-    padding: 30px 0;
-    font-size: 0.9rem;
-}
-
-/* Media Queries para Responsividad */
-@media (max-width: 960px) {
-    .hero-content h1 {
-        font-size: 3rem;
-    }
-    .hero-content p {
-        font-size: 1.3rem;
-    }
-
-    .kit-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .kit-text {
-        max-width: 100%;
-        text-align: center;
-    }
-    .kit-images {
-        flex-direction: column;
-        width: 100%;
-    }
-    .kit-images img {
-        width: 80%; /* Ajuste para móviles */
-    }
-}
-
-@media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    h3 { font-size: 1.5rem; }
-
-    .main-header .container {
-        flex-direction: column;
-    }
-    .main-nav {
-        margin-top: 15px;
-    }
-    .main-nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .main-nav ul li {
-        margin: 0 15px 10px;
-    }
-
-    .hero-banner {
-        height: 70vh;
-    }
-    .hero-content h1 {
-        font-size: 2.8rem;
-    }
-    .hero-content p {
-        font-size: 1.1rem;
-    }
-
-    .info-grid, .packages-grid {
-        grid-template-columns: 1fr; /* Una columna para móviles */
-    }
-
-    .art-banner h3 {
-        font-size: 1.8rem;
-    }
-
-    .contact-content {
-        flex-direction: column;
-        align-items: center;
-    }
-    .contact-form, .contact-info {
-        max-width: 100%;
-        width: 100%;
-    }
-    .contact-form .btn-primary {
-        align-self: center; /* Centra el botón en móviles */
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    .hero-content p {
-        font-size: 0.9rem;
-    }
-    .btn {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
-    .logo {
-        font-size: 1.5rem;
-    }
-    .main-nav ul li {
-        margin: 0 10px 10px;
-    }
-    .kit-images img {
-        width: 95%; /* Un poco más grande para pantallas muy pequeñas */
-    }
-    .package-card {
-        padding: 30px;
-    }
-    .package-card .price {
-        font-size: 2rem;
-    }
-    .package-card ul li {
-        font-size: 1rem;
-    }
-    .art-banner h3 {
-        font-size: 1.5rem;
-    }
-}
+        /* Variables CSS */
+        :root {
+            --primary-color: #EA4899;
+            /* Rojo vibrante para CTA */
+            --secondary-color: #44B7E9;
+            /* Turquesa para elementos secundarios */
+            --dark-color: #000000;
+            --light-color: #f4f4f4;
+            --text-color: #424242;
+            --heading-color: #333;
+            --accent-color: #FAE11C;
+            /* Amarillo para detalles o destacados */
+            --bg-light-grey: #f9f9f9;
+            --header-height: 80px;
+            /* Altura del header */
+        }
+
+        /* Reset Básico y Tipografía */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo para controlar el scroll cuando el menú móvil está abierto */
+        body.nav-open {
+            overflow: hidden;
+        }
+
+        /*Fuente de logo - Branding Huellitas Run*/
+        @font-face {
+            font-family: 'Bukhari-Script';
+            src: url('assets/Font/Bukhari-Script.ttf') format('ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            /* Desplazamiento suave al hacer clic en los enlaces */
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+            /* Añadimos padding-top para compensar el header fijo */
+            padding-top: var(--header-height);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--heading-color);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        h1 {
+            font-family: 'Bukhari-Script', sans-serif;
+            font-size: 3.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Botones */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            font-size: 1rem;
+            /* Ajustado para el header */
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #FF4F4F;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.5);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--secondary-color);
+            border: 2px solid var(--secondary-color);
+            margin-top: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+
+        /* -------------------------------------
+        NUEVOS ESTILOS PARA EL HEADER
+        -------------------------------------
+        */
+        .main-header {
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            position: fixed;
+            /* Header fijo */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            height: var(--header-height);
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo img {
+            height: 50px;
+            /* Ajusta la altura de tu logo */
+            width: auto;
+            display: block;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .main-nav ul {
+            display: flex;
+            gap: 30px;
+            /* Espacio entre elementos del menú */
+        }
+
+        .main-nav ul li a {
+            color: var(--dark-color);
+            font-weight: 700;
+            transition: color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .main-nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Botón de la hamburguesa (oculto en desktop) */
+        .hamburger-button {
+            display: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1050;
+            /* Por encima del cajón */
+            padding: 10px;
+            /* Añadimos transición para la rotación */
+            transition: transform 0.3s ease-in-out;
+            /* Aseguramos que los SVGs internos no se desborden */
+            overflow: hidden;
+            position: relative;
+            width: 44px;
+            /* Damos tamaño fijo para la animación */
+            height: 44px;
+        }
+
+        .hamburger-button svg {
+            width: 30px;
+            height: 30px;
+            color: var(--dark-color);
+            /* Añadimos transiciones para el fade */
+            transition: opacity 0.3s ease-in-out;
+            /* Posicionamos los iconos uno sobre el otro */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Ocultar el icono de 'cerrar' por defecto */
+        .hamburger-button .icon-close {
+            /* display: none; */
+            /* Quitado para animar opacidad */
+            display: block;
+            /* Aseguramos que esté en el layout */
+            opacity: 0;
+        }
+
+        /* Mostrar 'cerrar' y ocultar 'hamburguesa' cuando está abierto */
+        .hamburger-button.is-open {
+            /* Rotamos el botón contenedor para un efecto extra */
+            transform: rotate(180deg);
+        }
+
+        .hamburger-button.is-open .icon-hamburger {
+            /* display: none; */
+            /* Quitado para animar opacidad */
+            opacity: 0;
+        }
+
+        .hamburger-button.is-open .icon-close {
+            /* display: block; */
+            /* Quitado para animar opacidad */
+            opacity: 1;
+        }
+
+        /* -------------------------------------
+        ESTILOS RESPONSIVOS (768px Y MENOS)
+        -------------------------------------
+        */
+        @media (max-width: 768px) {
+
+            /* Ocultar el botón de 'Inscríbete' del header en móvil (irá dentro del cajón) */
+            .btn-header-cta {
+                display: none;
+            }
+
+            /* Mostrar el botón de hamburguesa */
+            .hamburger-button {
+                display: block;
+            }
+
+            /* Estilos del "Cajón" (menú móvil) */
+            .main-nav {
+                display: none;
+                /* Oculto por defecto */
+                position: fixed;
+
+                /* --- NUEVA POSICIÓN DEL CAJÓN --- */
+                top: var(--header-height);
+                /* Inicia justo debajo del header */
+                left: 0;
+                right: 0;
+                width: 100%;
+                /* Ancho completo */
+                max-width: 100%;
+                /* Ancho completo */
+                height: calc(100vh - var(--header-height));
+                /* Alto completo restante */
+                /* --- FIN DE NUEVA POSICIÓN --- */
+
+                background-color: #fff;
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+                /* Sombra hacia abajo */
+
+                /* Layout interno */
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+
+                /* --- NUEVA ANIMACIÓN (Slide Down) --- */
+                /* Ocultamos moviéndolo hacia ARRIBA (detrás del header) */
+                transform: translateY(-100%);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            /* Estado abierto del "Cajón" */
+            .main-nav.is-open {
+                display: flex;
+                /* Lo movemos a su posición 0 (visible) */
+                transform: translateY(0);
+            }
+
+            /* Estilos de la lista de navegación dentro del cajón */
+            .main-nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 25px;
+            }
+
+            .main-nav ul li a {
+                font-size: 1.3rem;
+                /* Texto más grande para táctil */
+            }
+
+            /* El botón de 'Inscríbete' dentro del cajón */
+            .main-nav .btn-header-cta {
+                display: inline-block;
+                /* Mostrar el botón dentro del cajón */
+                font-size: 1.1rem;
+            }
+        }
+
+        /* -------------------------------------
+        FIN DE ESTILOS DEL HEADER
+        -------------------------------------
+        */
+
+        /* Hero Banner */
+        .hero-banner {
+            background: url('https://placehold.co/1920x800/f0a0a0/333?text=Corredores+con+perros') no-repeat center center/cover;
+            /* Usamos vh pero restamos la altura del header fijo */
+            height: calc(80vh - var(--header-height));
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Overlay oscuro */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            color: #fff;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            color: #f0f0f0;
+        }
+
+        /* Información de la Carrera */
+        .section-info {
+            background-color: var(--bg-light-grey);
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        /* --- NUEVOS ESTILOS PARA LAS 3 COLUMNAS DE TEXTO --- */
+        .about-columns {
+            display: flex;
+            gap: 40px;
+            text-align: left;
+            margin-bottom: 4rem;
+            margin-top: 3rem;
+        }
+
+        .about-col {
+            flex: 1;
+        }
+
+        .about-col h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            text-align: left;
+            /* Asegurar alineación izquierda para estos H3 específicos */
+        }
+
+        /* -------------------------------------------------- */
+
+        .section-info .description {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 3rem;
+        }
+
+        .info-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .info-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .info-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .info-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-columns {
+                display: flex;
+                text-align: left;
+                margin-bottom: 4rem;
+                margin-top: 3rem;
+                flex-direction: column;
+            }
+        }
+
+        /* Banner de División con Arte */
+        .art-banner {
+            background: url('https://placehold.co/1920x300/4ECDC4/ffffff?text=Arte+de+la+Carrera') no-repeat center center/cover;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            padding: 80px 0;
+        }
+
+        .art-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            /* Overlay */
+        }
+
+        .art-banner h3 {
+            position: relative;
+            z-index: 1;
+            font-size: 2.5rem;
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Playera y Medalla */
+        .section-kit {
+            background-color: #fff;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .kit-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .kit-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+            max-width: 600px;
+        }
+
+        .kit-text p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .kit-images {
+            flex: 1;
+            display: flex;
+            gap: 20px;
+            min-width: 300px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .kit-images img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .kit-images img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Paquetes */
+        .section-packages {
+            background-color: var(--bg-light-grey);
+            padding: 80px 0;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 3rem;
+        }
+
+        .package-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: fit-content;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .package-card.featured {
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 8px 25px rgba(255, 230, 109, 0.6);
+        }
+
+        .package-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .package-card .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .package-card ul {
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .package-card ul li {
+            font-size: 1.1rem;
+            padding: 8px 0;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .package-card ul li i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+
+        .package-card ul li .fa-times-circle {
+            color: #CCC;
+        }
+
+        .btn-package {
+            background-color: var(--secondary-color);
+            color: #fff;
+            font-size: 1.1rem;
+            display: block;
+            width: 100%;
+        }
+
+        .btn-package:hover {
+            background-color: #3BBFBA;
+        }
+
+        .btn-package.btn-featured {
+            background-color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-package.btn-featured:hover {
+            background-color: #FF4F4F;
+        }
+
+        /* --- NUEVOS ESTILOS PARA PAQUETES --- */
+
+        /* Espacio para la imagen del kit */
+        .kit-image-placeholder {
+            margin-bottom: 20px;
+        }
+
+        .kit-image-placeholder img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para el nuevo Dropdown (Select) */
+        .package-card select.kit-select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border: 2px solid var(--secondary-color);
+            border-radius: 8px;
+            font-size: 1.1rem;
+            color: var(--dark-color);
+            background-color: #fff;
+            appearance: none;
+            /* Quita el estilo nativo de flecha */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2344B7E9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 20px;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+
+        .package-card select.kit-select:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        /* Contenedor de las tallas */
+        .size-options-container {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px dashed #ddd;
+        }
+
+        .size-options-container h4 {
+            font-size: 1rem;
+            color: var(--heading-color);
+            margin-bottom: 15px;
+        }
+
+        /* Grid para las 2 columnas de tallas */
+        .size-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .size-column h5 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para los botones de talla */
+        .btn-size {
+            width: 100%;
+            padding: 8px 10px;
+            margin-bottom: 8px;
+            /* Espacio entre botones */
+            border-radius: 5px;
+            background-color: var(--bg-light-grey);
+            color: var(--text-color);
+            font-size: 0.9rem;
+            font-weight: 700;
+            border: 1px solid #ddd;
+        }
+
+        .btn-size:hover {
+            background-color: var(--secondary-color);
+            color: #fff;
+            transform: none;
+            box-shadow: none;
+            border-color: var(--secondary-color);
+        }
+
+        /* Estilo para el botón de talla seleccionado (activo) */
+        .btn-size.active {
+            background-color: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+
+        /* Responsivo para las columnas de talla */
+        @media (max-width: 480px) {
+            .size-options {
+                grid-template-columns: 1fr;
+                /* Una columna para pantallas muy pequeñas */
+            }
+        }
+
+        /* Footer */
+        a.logo {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: flex-start;
+        }
+
+        p.triangulo {
+            font-size: 26px;
+            font-weight: 800;
+        }
+
+        /* --- 2. Footer Principal (Negro) --- */
+        .main-footer-black {
+            background-color: var(--dark-color);
+            color: #f0f0f0;
+            padding: 60px 0 0;
+            /* Quitamos padding bottom para que lo maneje el footer-bottom */
+            font-size: 0.95rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            /* La primera columna es más ancha que las demás */
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #333;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            /* Reseteamos la alineación de H2 */
+            text-align: left;
+        }
+
+        .footer-col ul li a {
+            display: block;
+            color: #f0f0f0;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+            font-weight: 400;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Estilos de la Columna Branding */
+        .footer-branding .logo img {
+            height: 40px;
+            margin-bottom: 20px;
+            /* Asumiendo que Huellitas_logo_light.png existe */
+            /* Si solo tienes el logo oscuro, usa filter: brightness(0) invert(1) para hacerlo blanco */
+        }
+
+        .footer-branding p {
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand {
+            align-items: flex-start;
+            border-radius: 0;
+            column-gap: 8px;
+            display: flex;
+            flex-wrap: nowrap;
+            height: auto;
+            justify-content: flex-start;
+            padding: 0;
+            position: relative;
+            row-gap: 8px;
+        }
+
+        .social-links-footer {
+            display: flex;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .social-links-footer a {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+
+        .social-links-footer a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- 3. Footer Bottom (Línea Inferior) --- */
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            color: #888;
+            font-size: 0.8rem;
+        }
+
+        .footer-bottom .designer-text {
+            /* Texto de diseñador va en el centro en desktop */
+            margin: 0;
+        }
+
+        .footer-bottom .terms-link a {
+            color: #888;
+        }
+
+        .footer-bottom .terms-link a:hover {
+            color: var(--primary-color);
+        }
+
+
+        /* -------------------------------------
+        RESPONSIVO PARA EL FOOTER
+        ------------------------------------- */
+        @media (max-width: 960px) {
+            .footer-grid {
+                /* Se convierte en 2 columnas en tablet */
+                grid-template-columns: 2fr 1fr;
+            }
+
+            .footer-branding {
+                /* Ocupa las dos columnas en tablet */
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                /* Se convierte en 1 columna en móvil */
+                grid-template-columns: 1fr;
+            }
+
+            .footer-branding {
+                grid-column: span 1;
+            }
+
+            .footer-col {
+                padding-bottom: 20px;
+                border-bottom: 1px dashed #333;
+            }
+
+            .footer-col:last-of-type {
+                border-bottom: none;
+            }
+
+            .footer-bottom {
+                /* Apila los elementos en móvil */
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .newsletter-form-container {
+                /* El botón ocupa el ancho completo, quitamos el flex */
+                flex-direction: column;
+            }
+
+            .newsletter-form-container input,
+            .newsletter-form-container .btn-newsletter {
+                width: 100%;
+                border-radius: 0;
+            }
+        }
+
+        /* Media Queries de secciones (Ajustes menores) */
+        @media (max-width: 960px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .hero-content p {
+                font-size: 1.3rem;
+            }
+
+            .kit-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .kit-text {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .kit-images {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .kit-images img {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .hero-banner {
+                height: calc(100vh - var(--header-height));
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .info-grid,
+            .packages-grid {
+                grid-template-columns: 1fr;
+                /* Una columna para móviles */
+            }
+
+            .art-banner h3 {
+                font-size: 1.8rem;
+            }
+
+            .contact-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-form,
+            .contact-info {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .contact-form .btn-primary {
+                align-self: center;
+                /* Centra el botón en móviles */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+
+            .kit-images img {
+                width: 95%;
+            }
+
+            .package-card {
+                padding: 30px;
+            }
+
+            .package-card .price {
+                font-size: 2rem;
+            }
+
+            .package-card ul li {
+                font-size: 1rem;
+            }
+
+            .art-banner h3 {
+                font-size: 1.5rem;
+            }
+        }
