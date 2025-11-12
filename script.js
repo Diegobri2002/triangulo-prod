@@ -3,7 +3,7 @@ function generatePurchaseUrl(packageId, option, size) {
     // Objeto de mapeo de URLs. **REEMPLAZA ESTOS PLACEHOLDERS CON TUS ENLACES REALES.**
     const urlMap = {
         'medal-runner': { // Kit 1: No requiere talla, solo opción.
-            'buy-pickup-1': '/products/kit-medal-runner?variant=47295929057525', 
+            'buy-pickup-1': 'https://trianguloproducciones.com.mx/products/kit-medal-runner?variant=47295929057525', 
             'buy-ship-1': 'https://tumarca.com/compra/medal-runner/envio'
         },
         'pet-runner': { // Kit 2: Requiere opción Y talla.
