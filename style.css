@@ -723,6 +723,36 @@
             }
         }
 
+/* --- ESTILOS PARA TARJETAS DE PRODUCTOS EXTRA --- */
+
+        /* Estilo para la descripción del producto */
+        .package-card .product-description {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            /* flex-grow: 1; 
+             Esto empuja el botón al fondo de la tarjeta, 
+             ya que .package-card es un flex-column.
+            */
+            flex-grow: 1; 
+        }
+
+        /* Estilo para la nota en la descripción */
+        .package-card .product-description small {
+            display: inline-block;
+            margin-top: 10px;
+            color: #777;
+        }
+        
+        /* El estilo .btn-package ya existe en tu CSS original (línea 527)
+         y funcionará perfectamente aquí.
+         Agregamos 'product-card' al HTML para evitar que el JS 
+         intente interactuar con ellas, si acaso.
+        */
+        .product-card a.btn-package {
+            margin-top: auto; /* Se asegura que el botón se mantenga al fondo */
+        }
+
         /* Footer */
         a.logo {
             display: flex;
