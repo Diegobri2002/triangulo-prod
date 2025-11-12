@@ -428,11 +428,6 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .info-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-        }
-
         .info-item i {
             font-size: 2.5rem;
             color: var(--primary-color);
@@ -561,11 +556,6 @@
             flex-direction: column;
             justify-content: space-between;
             height: fit-content;
-        }
-
-        .package-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
         }
 
         .package-card.featured {
@@ -922,7 +912,6 @@
 
             .kit-text {
                 max-width: 100%;
-                text-align: center;
             }
 
             .kit-images {
