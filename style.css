@@ -600,7 +600,7 @@
         }
 
         .btn-package {
-            background-color: var(--secondary-color);
+            background-color: var(--primary-color);
             color: #fff;
             font-size: 1.1rem;
             display: block;
