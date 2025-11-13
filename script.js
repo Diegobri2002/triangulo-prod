@@ -3,63 +3,63 @@ function generatePurchaseUrl(packageId, option, size) {
     // Objeto de mapeo de URLs. **REEMPLAZA ESTOS PLACEHOLDERS CON TUS ENLACES REALES.**
     const urlMap = {
         'medal-runner': { // Kit 1: No requiere talla, solo opción.
-            'buy-pickup-1': 'https://trianguloproducciones.com.mx/products/kit-medal-runner?variant=47295929057525', 
-            'buy-ship-1': 'https://trianguloproducciones.com.mx/products/kit-medal-runner-envio?variant=47295935676661'
+            'buy-pickup-1': 'https://trianguloproducciones.com.mx/products/kit-medal-runner', 
+            'buy-ship-1': 'https://trianguloproducciones.com.mx/products/kit-medal-runner-envio'
         },
         'pet-runner': { // Kit 2: Requiere opción Y talla.
             'buy-pickup-2': {
                 // Hombres - Recoger
-                'H-CH': 'https://trianguloproducciones.com.mx/products/kit-medal-running',
-                'H-M': 'https://tumarca.com/compra/pet-runner/recoger?t=H-M',
-                'H-G': 'https://tumarca.com/compra/pet-runner/recoger?t=H-G',
-                'H-XG': 'https://tumarca.com/compra/pet-runner/recoger?t=H-XG',
+                'H-CH': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-hombre-ch',
+                'H-M': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-hombre-m',
+                'H-G': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-hombre-g',
+                'H-XG': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-hombre-xg',
                 // Mujeres - Recoger
-                'M-XCH': 'https://trianguloproducciones.com.mx/products/kit-medal-running',
-                'M-CH': 'https://tumarca.com/compra/pet-runner/recoger?t=M-CH',
-                'M-M': 'https://tumarca.com/compra/pet-runner/recoger?t=M-M',
-                'M-G': 'https://tumarca.com/compra/pet-runner/recoger?t=M-G',
-                'M-XG': 'https://tumarca.com/compra/pet-runner/recoger?t=M-XG'
+                'M-XCH': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-mujer-xch',
+                'M-CH': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-mujer-ch',
+                'M-M': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-mujer-m',
+                'M-G': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-mujer-g',
+                'M-XG': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-mujer-xg'
             },
             'buy-ship-2': {
                 // Hombres - Envío
-                'H-CH': 'https://trianguloproducciones.com.mx/products/kit-medal-running',
-                'H-M': 'https://tumarca.com/compra/pet-runner/envio?t=H-M',
-                'H-G': 'https://tumarca.com/compra/pet-runner/envio?t=H-G',
-                'H-XG': 'https://tumarca.com/compra/pet-runner/envio?t=H-XG',
+                'H-CH': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-hombre-ch-envio',
+                'H-M': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-hombre-m-envio',
+                'H-G': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-hombre-g-envio',
+                'H-XG': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-hombre-xg-envio',
                 // Mujeres - Envío
-                'M-XCH': 'https://trianguloproducciones.com.mx/products/kit-medal-running',
-                'M-CH': 'https://tumarca.com/compra/pet-runner/envio?t=M-CH',
-                'M-M': 'https://tumarca.com/compra/pet-runner/envio?t=M-M',
-                'M-G': 'https://tumarca.com/compra/pet-runner/envio?t=M-G',
-                'M-XG': 'https://tumarca.com/compra/pet-runner/envio?t=M-XG'
+                'M-XCH': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-mujer-xch-envio',
+                'M-CH': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-mujer-ch-envio',
+                'M-M': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-mujer-m-envio',
+                'M-G': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-mujer-g-envio',
+                'M-XG': 'https://trianguloproducciones.com.mx/products/kit-pet-runner-playera-mujer-xg-envio'
             }
         },
         'runner': { // Kit 3: Requiere opción Y talla.
             'buy-pickup-3': {
                 // Hombres - Recoger
-                'H-CH': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-ch?variant=47296106234101',
-                'H-M': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-m?variant=47296114262261',
-                'H-G': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-g?variant=47296117309685',
-                'H-XG': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-xg?variant=47296118096117',
+                'H-CH': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-ch',
+                'H-M': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-m',
+                'H-G': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-g',
+                'H-XG': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-xg',
                 // Mujeres - Recoger
-                'M-XCH': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-xch?variant=47296122126581',
-                'M-CH': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-ch?variant=47296122421493',
-                'M-M': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-m?variant=47296122880245',
-                'M-G': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-g?variant=47296124059893',
-                'M-XG': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-xg?variant=47296124584181'
+                'M-XCH': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-xch',
+                'M-CH': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-ch',
+                'M-M': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-m',
+                'M-G': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-g',
+                'M-XG': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-xg'
             },
             'buy-ship-3': {
                 // Hombres - Envío
-                'H-CH': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-ch-envio?variant=47296113803509',
-                'H-M': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-m-envio?variant=47296114884853',
-                'H-G': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-g-envio?variant=47296117637365',
-                'H-XG': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-xg-envio?variant=47296118194421',
+                'H-CH': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-ch-envio',
+                'H-M': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-m-envio',
+                'H-G': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-g-envio',
+                'H-XG': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-hombre-xg-envio',
                 // Mujeres - Envío
-                'M-XCH': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-xch-envio?variant=47296122257653',
-                'M-CH': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-ch-envio?variant=47296122749173',
-                'M-M': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-m-envio?variant=47296123797749',
-                'M-G': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-g-envio?variant=47296124354805',
-                'M-XG': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-xg-envio?variant=47296124977397'
+                'M-XCH': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-xch-envio',
+                'M-CH': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-ch-envio',
+                'M-M': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-m-envio',
+                'M-G': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-g-envio',
+                'M-XG': 'https://trianguloproducciones.com.mx/products/kit-runner-playera-mujer-xg-envio'
             }
         }
     };
